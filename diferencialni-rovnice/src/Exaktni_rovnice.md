@@ -1,8 +1,9 @@
 # Exaktní rovnice
 
 - pozná se tak, že má v zápisu $dx$ a $dy$
-- tvar $M(x,y)dx + N(x,y)dy = 0$
-    - (funkce, která je násobena $dx$ je $M$, druhá, násobená $dy$ je $N$)
+- tvar 
+$$M(x,y)dx + N(x,y)dy = 0$$
+- (funkce, která je násobena $dx$ je $M$, druhá, násobená $dy$ je $N$)
 
 ## Výpočet
 
@@ -22,17 +23,22 @@ $$ \underbrace{({1 \over y} + x)}_{\text{M}}*dx \underbrace{\ - \ ({x \over y^2}
 - funkci vždy derivujeme podle **opačné proměnné**, než podle které jsme ji integrovali
 - na pravou stranu rovnice vždy dosazujeme **tu druhou funkci** ($M$ nebo $N$), než jsme integrovali
     $$
-        \begin{align*}
+        \begin{aligned}
         {d \over dx}F(x,y) &= M \\
         {d \over dx}({x \over y} + c(x)) &= {1 \over y} + x \\
         ... \\
-        c(x) &= \underline{\underline{{x^2 \over 2} + c}}&\ c\in\R \\
-        \end{align*}
+        c(x) &= \underline{\underline{{x^2 \over 2} + c}} & c \in \mathbb{R}
+        \end{aligned}
     $$ 
 - nalezenou funkci $c(x)$ dosadíme do vypočtené funkce $F(x,y)$ z předchozího kroku a máme výsledek
     $$
-        \begin{align*}
+        \begin{aligned}
         F(x,y) &= {x \over y} + c(x) \\
-        F(x,y) &= \underline{\underline{{x \over y} + {x^2 \over 2} + c}} &\ c\in\R
-        \end{align*}
+        F(x,y) &= \underline{\underline{{x \over y} + {x^2 \over 2} + c}} & c \in \mathbb{R}
+        \end{aligned}
     $$
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+</script>
