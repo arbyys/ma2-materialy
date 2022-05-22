@@ -13,17 +13,17 @@ $$ \underbrace{({1 \over y} + x)}_{\text{M}}*dx \underbrace{\ - \ ({x \over y^2}
     - parciální derivace se musí rovnat 
     $$ {\partial M \over \partial y} = {\partial N \over \partial x} $$
     - pokud vztah neplatí, musíme rovnici pronásobit integračním faktorem, poté dostaneme exaktní rovnici
-        - todo
 - jakmile vztah platí, můžeme začít počítat:
 - chceme nalézt **kmenovou funkci** $F(x,y)$
-- zintegrujeme buď funkci $M$ podle $x$, nebo funkci $N$ podle $y$ (můžeme si vybrat) - např. funkci $N$:
+- zintegrujeme buď funkci $M$ podle $x$, nebo funkci $N$ podle $y$ (můžeme si vybrat)
+- nezapomenut přidat $c(x)$ pokud integrujeme podle $y$, nebo $c(y)$ pokud integrujeme podle $x$
     $$ F(x,y) = \int{Ndy} =\\= \int{(-{x \over y^2})dy} =\\ ...\\...\\ = \underline{\underline{{x \over y} + c(x)}} $$
 - výsledek dosadíme do následujícího vztahu a potřebujeme **vyjádřit**  $c(x)$
 - funkci vždy derivujeme podle **opačné proměnné**, než podle které jsme ji integrovali
 - na pravou stranu rovnice vždy dosazujeme **tu druhou funkci** ($M$ nebo $N$), než jsme integrovali
     $$
         \begin{align*}
-        F(x,y){d \over dx} &= M \\
+        {d \over dx}F(x,y) &= M \\
         {d \over dx}({x \over y} + c(x)) &= {1 \over y} + x \\
         ... \\
         c(x) &= \underline{\underline{{x^2 \over 2} + c}}&\ c\in\R \\
