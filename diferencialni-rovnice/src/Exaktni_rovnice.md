@@ -29,7 +29,7 @@ $$
 - nezapomenut přidat $c(x)$ pokud integrujeme podle $y$, nebo $c(y)$ pokud integrujeme podle $x$
 
 $$
-F(x,y) = \int \! N \, \mathrm{d}y =\\= \int \! -{x \over y^2} \, \mathrm{d}y =\\ ...\\...\\ = \underline{\underline{{x \over y} + c(x)}}
+F(x,y) = \int \! N \, \mathrm{d}y =\\ = \int \! -{x \over y^2} \, \mathrm{d}y =\\ ...\\ ...\\ = \underline{\underline{{x \over y} + c(x)}}
 $$
 
 - výsledek dosadíme do následujícího vztahu a potřebujeme **vyjádřit**  $c(x)$

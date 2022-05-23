@@ -13,7 +13,7 @@ _λ_<sup>2</sup> - 4 = 0<br>_λ_ = ±2
 _y(x)_ =  _c_<sub>1</sub>_e_<sup>-2<i>x</i></sup> + _c_<sub>2</sub>_e_<sup>2<i>x</i></sup>
 
 * Pokud _λ_ je _k_-násobný kořen charakteristického polynomu, pak řešením jsou _e_<sup>_λx_</sup>, _xe_<sup>_λx_</sup>, ..., _x_<sup>_k_-1</sup>_e_<sup>_λx_</sup>
-* Pokud _λ_ = _α_ ± <i>βi</i>, pak _y(x)_ = _e_<sup>_αx_</sup>(_c_<sub>1</sub>sin(_βx_) + _c_<sub>2</sub>cos(_βx_))
+* Pokud _λ_ = _α_ ± _βi_, pak _y(x)_ = _e_<sup>_αx_</sup>(_c_<sub>1</sub>sin(_βx_) + _c_<sub>2</sub>cos(_βx_))
 
 ## Nehomogenní tvar
 
@@ -117,6 +117,15 @@ $$
 
 ### Speciální pravá strana: polynom ⋅ exponenciela ⋅ goniometrická funkce
 
+* Pravá strana obecně _P(x)_ ⋅ _e<sup>αx</sup>_ ⋅ sin,cos(_βx_)
+* Řešením homogenní rovnice pro _λ_ = _α_ ± _βi_ je ___y<sub>h</sub>_ = _e_<sup>_αx_</sup>(_c_<sub>1</sub>sin(_βx_) + _c_<sub>2</sub>cos(_βx_))__
+* Partikulární řešení hledáme ve tvaru ___e<sup>(α+βi)x</sup>_ ⋅ _x<sup>m</sup>_ ⋅ _Q(x)___, kde _m_ je násobnost kořene _α_ ± _βi_ v charakteristickém polynomu
+* Partikulární řešení dosazujeme do zadání, kde na pravé straně exponencielu a goniometrickou funkci nahradíme za _e<sup>(α+βi)x</sup>_
+* Po úpravě použijeme na _y<sub>p</sub>_ identitau ___e<sup>βix</sup>_ = cos(_βx_) + _i_ ⋅ sin(_βx_)__
+* Opecné řešení je pak součet homogenního a
+  * imaginární části partikulárního řešení pro rovnice se sinem
+  * reálné části partikulárního řešení pro rovnice s kosinem
+
 #### Příklad III
 
 Vyřešte rovnici _y_'' + _y_ = 5<i>e<sup>x</sup></i>sin(_x_).
@@ -127,7 +136,7 @@ Vyřešte rovnici _y_'' + _y_ = 5<i>e<sup>x</sup></i>sin(_x_).
   * gon = sin(1<i>x</i>) ⇒ _β_ = 1
 * Nejprve vyřešíme homogenní část (kořeny charakteristického polynomu)
   * Vyjdou nám kořeny ±<i>i</i>
-  * _α_ ± <i>βi</i> = 1 ± 1<i>i</i> je nulanásobným kořenem charakteristického polynomu, _m_ je tedy rovno nule
+  * _α_ ± _βi_ = 1 ± 1<i>i</i> je nulanásobným kořenem charakteristického polynomu, _m_ je tedy rovno nule
 * Hledáme partikulární řešení ve tvaru _e<sup>(α+βi)x</sup>_ ⋅ _x<sup>m</sup>_ ⋅ _Q(x)_
   * V našem případě _α_ = 1 a _m_ = 0; _Q(x)_ je vždy stejného řádu jako _P(x)_
   * Partikulární řešení je tedy ve tvaru _e<sup>(1+1i)x</sup>_ ⋅ _x<sup>0</sup>_ ⋅ _Q(x)_, musíme spočítat jeho druhou derivaci, abychom ho mohli dosadit do zadání
@@ -135,13 +144,14 @@ Vyřešte rovnici _y_'' + _y_ = 5<i>e<sup>x</sup></i>sin(_x_).
   * Po dosazení do zadání by rovnice měly jít vydělit exponencielou
   * _y<sub>p</sub>_ můžeme přepsat pomocí identity _e<sup>βix</sup>_ = cos(_βx_) + _i_ ⋅ sin(_βx_)
 * Partikulární řešení rovnice se sinem je pouze imaginární část _y<sub>p</sub>_
+* Výsledkem je _y<sub>h</sub>_ + ℑ(_y<sub>p</sub>_)
 
 $$
 \begin{align*}
 y''+y&=5e^x\sin(x) \\
 \\
 \lambda^2+1&=0 \\
-\lambda&=\{0+i; 0-i\} \\
+\lambda&=0\pm i \\
 \\
 \implies m&=0 \\
 \implies y_p&=e^{(1+1i)x}\cdot x^0\cdot A \\
@@ -165,3 +175,50 @@ y&=(c_1\sin(x)+c_2\cos(x))+e^x(\sin(x)-2\cos(x)) \\
 $$
 
 #### Příklad IV
+
+Vyřešte rovnici _y_'' + _y_ = 2cos(_x_).
+
+* Rovnici si můžeme představit jako _y_'' + _y_ = (2) _e_<sup>0<i>x</i></sup></i> cos(1<i>x</i>)
+  * _P(x)_ = 2
+  * exp = _e_<sup>0<i>x</i></sup></i> ⇒ _α_ = 0
+  * gon = cos(1<i>x</i>) ⇒ _β_ = 1
+* Nejprve vyřešíme homogenní část (kořeny charakteristického polynomu)
+  * Vyjdou nám kořeny ±<i>i</i>
+  * _α_ ± _βi_ = 0 ± 1<i>i</i> je jednanásobným kořenem charakteristického polynomu, _m_ je tedy rovno jedné
+* Hledáme partikulární řešení ve tvaru _e<sup>(α+βi)x</sup>_ ⋅ _x<sup>m</sup>_ ⋅ _Q(x)_
+  * V našem případě _α_ = 0 a _m_ = 1; _Q(x)_ je vždy stejného řádu jako _P(x)_
+  * Partikulární řešení je tedy ve tvaru _e<sup>(0+1i)x</sup>_ ⋅ _x<sup>1</sup>_ ⋅ _Q(x)_, musíme spočítat jeho druhou derivaci, abychom ho mohli dosadit do zadání
+* Tvar _y<sub>p</sub>_ a jeho derivace dosadíme do rovnice, kde levá strana je stejná jako zadání a pravá strana = _P(x)_ ⋅ _e<sup>(α+βi)x</sup>_ (exponenciela a goniometrická funkce nahrazeny _e<sup>(α+βi)x</sup>_), dopočítáme _A_
+  * Po dosazení do zadání by rovnice měly jít vydělit exponencielou
+  * _y<sub>p</sub>_ můžeme přepsat pomocí identity _e<sup>βix</sup>_ = cos(_βx_) + _i_ ⋅ sin(_βx_)
+* Partikulární řešení rovnice s kosinem je pouze reálná část _y<sub>p</sub>_
+* Výsledkem je _y<sub>h</sub>_ + ℜ(_y<sub>p</sub>_)
+
+$$
+\begin{align*}
+y''+y&=2\cos(x) \\
+\\
+\lambda^2+1&=0 \\
+\lambda&=0\pm i
+\\
+\implies m&=1 \\
+\implies y_p&=e^{(0+1i)x}\cdot x^1\cdot A \\
+\\
+y_p&=e^{ix}\cdot x\cdot A \\
+y_p'&=A(e^{ix}\cdot i\cdot x+e^{ix}) \\
+&=Ae^{ix}ix+Ae^{ix} \\
+y_p''&=Ai(e^{ix}\cdot i\cdot x+e^{ix})+Aie^{ix} \\
+&=Ae^{ix}\cdot (-1)\cdot x+Aie^{ix}+Aie^{ix} \\
+&=Ae^{ix}(2i-x) \\
+\\
+Ae^{ix}(2i-x)+e^{ix}xA&=2e^{ix} \\
+A(2i-x)+xA&=2 \\
+2iA&=2 \\
+A&=-i \\
+\implies y_p&=e^{ix}\cdot x \cdot (-i) \\
+&=(\cos(x)+i\sin(x))\cdot x\cdot (-i) = (\sin(x)-i\cos(x))\cdot x\\
+\\
+y&=(c_1\sin(x)+c_2\cos(x))+ℜ(y_p) \\
+y&=(c_1\sin(x)+c_2\cos(x))+\sin(x)\cdot x \\
+\end{align*}
+$$
