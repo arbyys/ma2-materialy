@@ -9,6 +9,7 @@ $$
 
 ## Výpočet
 - úkolem je transformovat rovnici na lineární, kterou už poté dokážeme vyřešit klasicky
+- pokud u výrazu $y^n$ je $n>0$, automaticky můžeme přidat $y=0$ jako řešení příkladu
 
 $$
 y' + xy = xy^3
@@ -44,3 +45,4 @@ $$
 
 - výsledek už je klasická lineární rovnice, kterou můžeme řešit integračním faktorem / variací konstant
 - na konci nezapomenout vrátit substituci
+- nezapomenout přidat $y=0$ jako řešení příkladu - jelikož u výrazu $y^n$ je $n>0$ 
