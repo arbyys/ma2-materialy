@@ -10,6 +10,7 @@ ___
 ## Homogenní rovnice
 
 - todo
+
 ___
 
 ## Lineární rovnice
@@ -21,7 +22,7 @@ $$y' + f(x)y = g(x)$$
 - jedna funkce závislá na $x$ násobí proměnnou $y$
 - pokud $f(x) = 0$, řešení je pouze integrál z $g(x)$ - "triviální případ"
 - pokud $g(x) = 0$, řešení získáme pomocí metody separace proměnných - "triviální případ"
-- pokud $g(x) \neq 0 $ a $f(x) \neq 0 $, musíme použít jednu z uvedených metod
+- pokud $g(x) \neq 0$ a $f(x) \neq 0$, musíme použít jednu z uvedených metod
 
 zadaná rovnice:
 $$
@@ -47,7 +48,7 @@ y' - 2xy &= x &/*i_f\\
 \underbrace{y'e^{-x^2}}_{\text{1. člen}} -2xye^{-x^2} &= xe^{-x^2}\\
 \end{aligned}
 $$
-- nyní uděláme obrat šílenců 🤯:
+- nyní uděláme obrat šílenců:
     - vezmeme **první člen rovnice** (zvýrazněno), **smažeme derivaci u $y$**, součin dáme do závorky a tu celou zderivujeme
     - zbytek levé strany smažeme, pravou stranu opíšeme
         - obrat funguje díky vzorci na derivaci součinu (pokud výslednou závorku zderivujeme, vyjde nám původní levá strana rovnice)
@@ -58,7 +59,7 @@ $$
 \end{aligned}
 $$
 
-- nyní si lze všimnout, že na levé straně se nachází pouze derivaci
+- nyní si lze všimnout, že na levé straně se nachází pouze derivace
 - můžeme tedy obě strany zintegrovat a na levé straně se nám to vyruší s derivací
 - poté stačí pouze vyjádřit $y$
 
