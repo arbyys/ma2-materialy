@@ -13,7 +13,7 @@ _λ_<sup>2</sup> - 4 = 0<br>_λ_ = ±2
 _y(x)_ =  _c_<sub>1</sub>_e_<sup>-2<i>x</i></sup> + _c_<sub>2</sub>_e_<sup>2<i>x</i></sup>
 
 * Pokud _λ_ je _k_-násobný kořen charakteristického polynomu, pak řešením jsou _e_<sup>_λx_</sup>, _xe_<sup>_λx_</sup>, ..., _x_<sup>_k_-1</sup>_e_<sup>_λx_</sup>
-* Pokud _λ_ = _α_ ± _βi_, pak _y(x)_ = _e_<sup>_αx_</sup>(_c_<sub>1</sub>sin(_βx_) + _c_<sub>2</sub>cos(_βx_))
+* Pokud _λ_ = _a_ ± _bi_, pak _y(x)_ = _e_<sup>_αx_</sup>(_c_<sub>1</sub>sin(_bx_) + _c_<sub>2</sub>cos(_bx_))
 
 ## Nehomogenní tvar
 
@@ -118,11 +118,11 @@ $$
 ### Speciální pravá strana: polynom ⋅ exponenciela ⋅ goniometrická funkce
 
 * Pravá strana obecně _P(x)_ ⋅ _e<sup>αx</sup>_ ⋅ sin,cos(_βx_)
-* Řešením homogenní rovnice pro _λ_ = _α_ ± _βi_ je ___y<sub>h</sub>_ = _e_<sup>_αx_</sup>(_c_<sub>1</sub>sin(_βx_) + _c_<sub>2</sub>cos(_βx_))__
-* Partikulární řešení hledáme ve tvaru ___e<sup>(α+βi)x</sup>_ ⋅ _x<sup>m</sup>_ ⋅ _Q(x)___, kde _m_ je násobnost kořene _α_ ± _βi_ v charakteristickém polynomu
+* Řešením homogenní rovnice pro _λ_ = _a_ ± _bi_ je ___y<sub>h</sub>_ = _e_<sup>_ax_</sup>(_c_<sub>1</sub>sin(_bx_) + _c_<sub>2</sub>cos(_bx_))__
+* Partikulární řešení hledáme ve tvaru ___e<sup>(α+βi)x</sup>_ ⋅ _x<sup>m</sup>_ ⋅ _Q(x)___, kde _m_ je násobnost kořene _α_ ± _βi_ v charakteristickém polynomu (mělo by to tedy být buď nula nebo jedna)
 * Partikulární řešení dosazujeme do zadání, kde na pravé straně exponencielu a goniometrickou funkci nahradíme za _e<sup>(α+βi)x</sup>_
-* Po úpravě použijeme na _y<sub>p</sub>_ identitau ___e<sup>βix</sup>_ = cos(_βx_) + _i_ ⋅ sin(_βx_)__
-* Opecné řešení je pak součet homogenního a
+* Po úpravě použijeme na _y<sub>p</sub>_ identitu ___e<sup>βix</sup>_ = cos(_βx_) + _i_ ⋅ sin(_βx_)__
+* Obecné řešení je pak součet homogenního a
   * imaginární části partikulárního řešení pro rovnice se sinem
   * reálné části partikulárního řešení pro rovnice s kosinem
 
@@ -152,7 +152,9 @@ y''+y&=5e^x\sin(x) \\
 \\
 \lambda^2+1&=0 \\
 \lambda&=0\pm i \\
+y_h&=e^{0x}(c_1\sin(1x)+c_2\cos(1x)) \\
 \\
+\alpha\pm\beta&=1\pm i \\
 \implies m&=0 \\
 \implies y_p&=e^{(1+1i)x}\cdot x^0\cdot A \\
 \\
@@ -199,8 +201,10 @@ $$
 y''+y&=2\cos(x) \\
 \\
 \lambda^2+1&=0 \\
-\lambda&=0\pm i
+\lambda&=0\pm i \\
+y_h&=e^{0x}(c_1\sin(1x)+c_2\cos(1x)) \\
 \\
+\alpha\pm\beta&=1\pm i \\
 \implies m&=1 \\
 \implies y_p&=e^{(0+1i)x}\cdot x^1\cdot A \\
 \\
