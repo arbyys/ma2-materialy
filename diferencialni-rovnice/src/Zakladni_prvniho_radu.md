@@ -2,15 +2,80 @@
 ___
 
 ## Separace proměnných
+- občas trošku sussy
+- pro rovnice ve tvaru
+$$
+y' = f(x)*g(y)
+$$
+### Výpočet
+První příklad:
+$$
+y' = 3 * \sqrt{x}
+$$
+- pokud $f(x) = c$, vyřešíme jednoduchým zintegrováním obou stran rovnou
+$$
+\begin{aligned}
+y' &= 3*\sqrt{x} &/\int...dx\\
+y &= \underline{\underline{2*\sqrt{x^3}}}
+\end{aligned}
+$$
 
-- todo
+Druhý příklad:
+$$
+y' = {1 \over x^4} * 6y
+$$
+- pokud $f(x)\neq c$, musíme použít trošku složitější postup
+- $y'$ přepíšeme na ${dy \over dx}$, každou proměnnou poté dostaneme na jednu stranu 
+$$
+\begin{aligned}
+y' &= {1 \over x^4} * 6y\\
+{dy \over dx} &= {6y \over x^4} &/*dx\\
+dy &= {6y \over x^4}*dx &/:y\\
+{dy \over y} &= {6 \over x^4}*dx
+\end{aligned}
+$$
 
+- jakmile máme proměnné rozdělené na opačné strany rovnice, můžeme už integrovat (každou stranu podle příslušné proměnné - máme tam dx a dy)
+- po integrování vyjádřit $y$ a hotovo
+$$
+\begin{aligned}
+{dy \over y} &= {6 \over x^4}*dx &/\int...\\
+\int{1 \over y} dy &= \int{6 \over x^4} dx\\
+ln|y| &= -{2 \over x^3} + c &/e^n\\
+e^{ln|y|} &= e^{-{2 \over x^3}+c}\\
+|y| &= e^{-{2 \over x^3}}*\underbrace{e^c}_\text{K}\\ 
+y &= \underline{\underline{\pm K + e^{-{2 \over x^3}}}}
+\end{aligned}
+$$
+- toho $\pm$ by se ještě šlo zbavit pomocí podmínek a polemizování, který člen je kladný a který záporný (asi)
 ___
 
 ## Homogenní rovnice
 
-- todo
+- dost sussy mrdka
+- ve tvaru
+$$
+y' = f({y \over x})
+$$
 
+- úkolem je převést rovnici na separované proměnné pomocí substituce
+
+### Výpočet
+$$
+    y' = {x^2 + y^2 \over xy}
+$$
+
+- použijeme substituci $y = x*z(x)$
+$$
+\begin{aligned}
+    y' &= {x^2 + y^2 \over xy} \\
+    z+xz' &= {x^2 + x^2z^2 \over x^2z}\\
+    z+xz' &= {x^2(1 + z^2) \over x^2z}\\
+    z' &= {1 \over xz}
+\end{aligned}
+$$
+
+- teď už můžeme postupovat pomocí separovaných proměnných, poté vrátit substituci
 ___
 
 ## Lineární rovnice
@@ -91,3 +156,9 @@ y &= -{1 \over 2} + {5 \over 2}*e^{x^2}\\
 y &= \underline{\underline{{5e^{x^2} - 1 \over 2}}}
 \end{aligned}
 $$
+
+### 2. metoda - **variace konstant**
+- rovnici **nemusíme** převést na tvar $y' + f(x)y = g(x)$ jako u integračního faktoru, ale hodí se to udělat
+    - tato funkce v tomto tvaru již je
+- vyřešíme homogenní tvar (levá strana rovnice je rovna nule - pokud ji máme ve správném tvaru viz. výše)
+- 
