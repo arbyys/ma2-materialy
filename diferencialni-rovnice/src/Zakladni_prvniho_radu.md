@@ -1,4 +1,5 @@
 # Základní diferenciální rovnice 1. řádu
+
 ___
 
 ## Separace proměnných
@@ -7,7 +8,9 @@ ___
 $$
 y' = f(x)*g(y)
 $$
+
 ### Výpočet
+
 První příklad:
 $$
 y' = 3 * \sqrt{x}
@@ -48,6 +51,7 @@ y &= \underline{\underline{\pm K + e^{-{2 \over x^3}}}}
 \end{aligned}
 $$
 - toho $\pm$ by se ještě šlo zbavit pomocí podmínek a polemizování, který člen je kladný a který záporný (asi)
+
 ___
 
 ## Homogenní rovnice
@@ -76,6 +80,7 @@ $$
 $$
 
 - teď už můžeme postupovat pomocí separovaných proměnných, poté vrátit substituci
+
 ___
 
 ## Lineární rovnice
@@ -95,6 +100,7 @@ $$
 $$
 
 ### 1. metoda - **integrační faktor**
+
 - nejdříve **musíme** funkci dostat do tvaru $y' + f(x)y = g(x)$
     - tato funkce v tomto tvaru již je
 - spočítáme integrační faktor $i_f = e^{\int f(x) dx}$
@@ -157,8 +163,63 @@ y &= \underline{\underline{{5e^{x^2} - 1 \over 2}}}
 \end{aligned}
 $$
 
+zadaná rovnice (pořád stejná):
+$$
+    y' - 2xy = x
+$$
+
 ### 2. metoda - **variace konstant**
+
 - rovnici **nemusíme** převést na tvar $y' + f(x)y = g(x)$ jako u integračního faktoru, ale hodí se to udělat
     - tato funkce v tomto tvaru již je
-- vyřešíme homogenní tvar (levá strana rovnice je rovna nule - pokud ji máme ve správném tvaru viz. výše)
-- 
+- vyřešíme homogenní tvar (což je levá strana rovnice rovna nule - pokud ji máme ve správném tvaru)
+$$
+\begin{aligned}
+y' - 2xy &= 0\\
+{dy \over dx} &= 2xy\\
+{dy \over y} &= 2x dx &/\int...\\
+\int{dy \over y} &= \int{2x dx} \\
+ln|y| &= x^2 + c\\
+|y| &= e^{x^2}*\underbrace{e^c}_\text{K}\\
+|y| &= K * e^{x^2}\\
+y &= \underline{K * e^{x^2}}
+\end{aligned}
+$$
+- vypočtené $y$ je nyní homogenní tvar rovnice
+- výslednou rovnici přeměníme tak, že z $K$ uděláme funkci - místo $K$ dáme $K(x)$
+$$
+y = K(x)*e^{x^2}
+$$
+- vzniklou vylepšnou rovnici dosadíme do zadání (pokud jsme ho upravovali na daný tvar, tak do upravené varianty)
+- vznikne docela šílená rovnice, ale...!
+    - na začátku bude derivace součinu, tu vyřešíme podle klasického pravidla pro derivaci součinu
+    - OVĚŘOVACÍ FÍGL: pokud jsme počítali správně, všechny $K(x)$ se nám při upravování krásně odečtou a zbyde pouze $K'(x)$
+    - poté pomocí integrace obou stran vyjádříme $K(x)$ z jeho derivace
+
+$$
+\begin{aligned}
+vypočtená\ rovnice&: y = K(x) * e^{x^2};\\
+rovnice\ ze\ začátku&: y' - 2xy = x;
+\\\\
+\underbrace{(K(x)*e^{x^2})'}_\text{y}-2x*\underbrace{K(x)*e^{x^2}}_\text{y}&=x\\
+K'(x)*e^{x^2}+K(x)*2xe^{x^2}-2xK(x)e^{x^2} &= x\\
+K'(x)*e^{x^2} &= x\\
+K'(x) &= {x \over e^{x^2}} &/\int...dx\\
+K(x) &= \underline{-{e^{-x^2} \over 2} + c}
+\end{aligned}
+$$
+- povedlo se nám vyjádřit $K(x)$ a následuje poslední krok - dosazení do vylepšené rovnice z předchozího kroku, která obsahuje $K(x)$ a to bude výsledek
+
+$$
+\begin{aligned}
+vylepšená\ rovnice&: y = K(x)*e^{x^2};\\
+vypočtené\ K(x)&: K(x) = -{e^{-x^2} \over 2} + c
+\\\\
+y &= (-{e^{-x^2} \over 2} + c) * e^{x^2}\\
+y &= (-{1 \over 2e^{x^2}} + c) * e^{x^2}\\
+y &= \underline{\underline{-{1 \over 2} + c*e^{x^2}}}
+\end{aligned}
+$$
+
+- vyšel stejný výsledek jako u integračního faktoru
+- zde bychom znovu aplikovali podmínky, stejně jako u integračního faktoru (vyřešeno nahoře)
