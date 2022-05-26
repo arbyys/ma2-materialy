@@ -43,8 +43,8 @@ $$
 \begin{align*}
 y''-2y'-3y&=(-3x+1)\cdot e^{0x} \\
 \\
-\lambda^2-2\lambda-3&=0 \\
-(\lambda+1)(\lambda-3)&=0 \\
+λ^2-2λ-3&=0 \\
+(λ+1)(λ-3)&=0 \\
 y_h&=c_1e^{-x}+c_2e^{3x} \\
 \\
 \implies m&=0 \\
@@ -89,8 +89,8 @@ $$
 \begin{align*}
 y''-2y'-3y&=(4)\cdot e^{-1x} \\
 \\
-\lambda^2-2\lambda-3&=0 \\
-(\lambda+1)(\lambda-3)&=0 \\
+λ^2-2λ-3&=0 \\
+(λ+1)(λ-3)&=0 \\
 y_h&=c_1e^{-x}+c_2e^{3x} \\
 \\
 \implies m&=1 \\
@@ -150,8 +150,8 @@ $$
 \begin{align*}
 y''+y&=5e^x\sin(x) \\
 \\
-\lambda^2+1&=0 \\
-\lambda&=0\pm i \\
+λ^2+1&=0 \\
+λ&=0\pm i \\
 y_h&=e^{0x}(c_1\sin(1x)+c_2\cos(1x)) \\
 \\
 \alpha\pm\beta&=1\pm i \\
@@ -200,8 +200,8 @@ $$
 \begin{align*}
 y''+y&=2\cos(x) \\
 \\
-\lambda^2+1&=0 \\
-\lambda&=0\pm i \\
+λ^2+1&=0 \\
+λ&=0\pm i \\
 y_h&=e^{0x}(c_1\sin(1x)+c_2\cos(1x)) \\
 \\
 \alpha\pm\beta&=1\pm i \\
