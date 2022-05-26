@@ -154,7 +154,7 @@ y''+y&=5e^x\sin(x) \\
 λ&=0\pm i \\
 y_h&=e^{0x}(c_1\sin(1x)+c_2\cos(1x)) \\
 \\
-\alpha\pm\beta&=1\pm i \\
+\alpha\pm i\beta&=1\pm i \\
 \implies m&=0 \\
 \implies y_p&=e^{(1+1i)x}\cdot x^0\cdot A \\
 \\
@@ -204,7 +204,7 @@ y''+y&=2\cos(x) \\
 λ&=0\pm i \\
 y_h&=e^{0x}(c_1\sin(1x)+c_2\cos(1x)) \\
 \\
-\alpha\pm\beta&=1\pm i \\
+\alpha\pm i\beta&=0\pm i \\
 \implies m&=1 \\
 \implies y_p&=e^{(0+1i)x}\cdot x^1\cdot A \\
 \\
